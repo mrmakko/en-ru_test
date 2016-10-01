@@ -76,8 +76,12 @@ class SiteController extends Controller
                 $output['status'] = 1;
             else{
                 $output['status'] = 0;
-                $db->createCommand('INSERT INTO wrong_answers (count,word_en, word_ru) VALUES (1,"'.$data['answer'].'", "'.$data['question'].'") '.
-                                    ' ON DUPLICATE KEY UPDATE count = count+1')->execute();
+                $id_e = $db->createCommand('SELECT id FROM wrong_answers WHERE word_en = "'.$data['answer'].
+                            '" AND word_ru = "'.$data['question'].'"')->queryScalar();
+                if ($id_e)
+                    $db->createCommand('UPDATE wrong_answers SET `count` = `count`+1 WHERE id='.$id_e)->execute();
+                else
+                    $db->createCommand('INSERT INTO wrong_answers (word_en, word_ru) VALUES ("'.$data['answer'].'", "'.$data['question'].'")')->execute();
                 return Json::encode($output);
             }
         }
