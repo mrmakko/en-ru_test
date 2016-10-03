@@ -69,6 +69,11 @@ class SiteController extends Controller
 
         $data = Json::decode($request->post('data')); // answer, question, score, score_e, name, used
 
+        if ($request->post('fin')){
+            $db->createCommand('INSERT INTO results (name, result, result_e) VALUES ("'.$data['name'].'", '.
+                                $data['score'].', '.$data['score_e'].')')->execute();
+        }
+
         if (isset($data['answer'])){
             $check = $db->createCommand('SELECT COUNT(*) FROM words WHERE word_en = "'.$data['answer'].'" AND word_ru = "'.
             $data['question']. '"')->queryScalar();
@@ -88,8 +93,7 @@ class SiteController extends Controller
         $output['words'] = $db->createCommand('SELECT id, word_en FROM words '.
                             (($data['used'] != '') ? 'WHERE id NOT IN('.implode(',', $data['used']).')' : '').
                             ' ORDER BY RAND() LIMIT 4 ')->queryAll();
-        
-        
+
         $output['question'] = $db->createCommand('SELECT id, word_ru FROM words WHERE id = "'.
             $output['words'][array_rand($output['words'])]['id'].'"')->queryOne();
 
