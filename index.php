@@ -18,7 +18,7 @@
         <input type="text" name="name" value="" id="identity" class="form-control" placeholder="Введите своё имя" ng-model="name">
     </div>
     <div class="col-md-2" ng-hide="haveName">
-        <input type="button" value="Начать тест" class="btn btn-primary btn-block" ng-click="submit(nameForm)">
+        <input type="button" value="Начать тест" class="btn btn-primary btn-block" ng-click="submit(nameForm)" ng-show="name">
     </div>
     </form>
     <div class="col-md-offset-2 col-md-8 text-center" ng-show="haveName && !fin">
@@ -70,7 +70,6 @@ app.controller("WordsCtrl", function($scope, $http) {
         $scope.dataStor.answer = $event.currentTarget.value;
         
         var serializedData = $.param({'data' : JSON.stringify($scope.dataStor)});
-        console.log($scope.dataStor);
 
         $http({
             method: 'POST',
@@ -85,7 +84,7 @@ app.controller("WordsCtrl", function($scope, $http) {
                     $scope.fin = true;
                 }
                 if (data.status == 0){
-                    $scope.score_e = $scope.score_e + 1;
+                    $scope.score_e += 1;
                     $scope.dataStor.score_e = $scope.score_e;
                     if ($scope.score_e == 3)
                         $scope.fin = true;
@@ -96,8 +95,6 @@ app.controller("WordsCtrl", function($scope, $http) {
                     $scope.words = data.words;
                     $scope.question = data.question.word_ru;
                     $scope.dataStor.question = $scope.question;
-                    console.log($scope.question);
-                   
 
                     usedIds.push(data.question.id);
 
@@ -108,32 +105,20 @@ app.controller("WordsCtrl", function($scope, $http) {
                 }, function(error) {
                    console.log(error);
                 });
-        
-/*        $.post('/backend/web', {'data' : JSON.stringify($scope.dataStor)})
-        .done(function(_data){
-            data = JSON.parse(_data);
-            if (data.status == 2){
-                $scope.fin = true;
-            }
-            if (data.status == 0){
-                $scope.score_e = $scope.score_e + 1;
-                $scope.dataStor.score_e = $scope.score_e;
-                if ($scope.score_e == 3)
-                    $scope.fin = true;
-            }
-            if (data.status == 1){
-                $scope.words = data.words;
-                $scope.question = data.question.word_ru;
 
-                usedIds.push(data.question.id);
-
-                $scope.score += 1;
-                $scope.dataStor.score = $scope.score;
-            }
-        }).fail(function(xhr, status, error) {
-            console.log(xhr);
-        });*/
     }
+
+    $scope.$watch('fin', function() {
+        serializedData = $.param({'data' : JSON.stringify($scope.dataStor), 'fin' : 1});
+        
+        $http({
+            method: 'POST',
+            url: '/backend/web',
+            data: serializedData,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }})
+    });
 
 });
 
