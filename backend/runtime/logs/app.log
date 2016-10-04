@@ -5339,3 +5339,318 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1475491570.3557
     'REQUEST_TIME' => 1475491570
 ]
+2016-10-04 12:33:21 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(95): yii\db\Command->queryAll()
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#11 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#12 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#13 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(95): yii\db\Command->queryAll()
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#11 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-10-04 12:33:19 [::1][-][-][info][application] $_COOKIE = [
+    'i18next' => 'en'
+    'remember_passphrase' => '1'
+    '_ym_uid' => '1468749701547999986'
+    '__utma' => '111872281.363574483.1449221589.1474882667.1474886477.140'
+    '__utmc' => '111872281'
+    '__utmz' => '111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => 'b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB\";}'
+    'last_visit' => '1475048339454::1475059139454'
+    '_ga' => 'GA1.1.363574483.1449221589'
+    'mp5localhost' => 'f00d8e73b208979beb767475237e6db2'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www_sky\\en-ru_test'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '12881'
+    'SERVER_SOFTWARE' => 'PHP 5.6.16 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/backend/web'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www_sky\\en-ru_test\\backend\\web\\index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.41 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'i18next=en; remember_passphrase=1; _ym_uid=1468749701547999986; __utma=111872281.363574483.1449221589.1474882667.1474886477.140; __utmc=111872281; __utmz=111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB%22%3B%7D; last_visit=1475048339454::1475059139454; _ga=GA1.1.363574483.1449221589; mp5localhost=f00d8e73b208979beb767475237e6db2'
+    'REQUEST_TIME_FLOAT' => 1475584399.2449
+    'REQUEST_TIME' => 1475584399
+]
+2016-10-04 12:33:23 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(221): yii\db\Connection->getMasterPdo()
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(838): yii\db\Command->prepare('<span class="ke...')
+#5 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(74): yii\db\Command->execute()
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#11 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(221): yii\db\Connection->getMasterPdo()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(838): yii\db\Command->prepare('<span class="ke...')
+#3 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(74): yii\db\Command->execute()
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#6 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#8 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#11 {main}
+Additional Information:
+
+2016-10-04 12:33:21 [::1][-][-][info][application] $_POST = [
+    'data' => ''
+    'fin' => '1'
+]
+
+$_COOKIE = [
+    'i18next' => 'en'
+    'remember_passphrase' => '1'
+    '_ym_uid' => '1468749701547999986'
+    '__utma' => '111872281.363574483.1449221589.1474882667.1474886477.140'
+    '__utmc' => '111872281'
+    '__utmz' => '111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => 'b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB\";}'
+    'last_visit' => '1475048339454::1475059139454'
+    '_ga' => 'GA1.1.363574483.1449221589'
+    'mp5localhost' => 'f00d8e73b208979beb767475237e6db2'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www_sky\\en-ru_test'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '12882'
+    'SERVER_SOFTWARE' => 'PHP 5.6.16 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/backend/web'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www_sky\\en-ru_test\\backend\\web\\index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '11'
+    'HTTP_CONTENT_LENGTH' => '11'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:8000'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.41 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:8000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'i18next=en; remember_passphrase=1; _ym_uid=1468749701547999986; __utma=111872281.363574483.1449221589.1474882667.1474886477.140; __utmc=111872281; __utmz=111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB%22%3B%7D; last_visit=1475048339454::1475059139454; _ga=GA1.1.363574483.1449221589; mp5localhost=f00d8e73b208979beb767475237e6db2'
+    'REQUEST_TIME_FLOAT' => 1475584401.9443
+    'REQUEST_TIME' => 1475584401
+]
+2016-10-04 12:34:58 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(95): yii\db\Command->queryAll()
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#11 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#12 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#13 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(95): yii\db\Command->queryAll()
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#9 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#11 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-10-04 12:34:56 [::1][-][-][info][application] $_COOKIE = [
+    'i18next' => 'en'
+    'remember_passphrase' => '1'
+    '_ym_uid' => '1468749701547999986'
+    '__utma' => '111872281.363574483.1449221589.1474882667.1474886477.140'
+    '__utmc' => '111872281'
+    '__utmz' => '111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => 'b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB\";}'
+    'last_visit' => '1475048339454::1475059139454'
+    '_ga' => 'GA1.1.363574483.1449221589'
+    'mp5localhost' => 'f00d8e73b208979beb767475237e6db2'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www_sky\\en-ru_test'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '12899'
+    'SERVER_SOFTWARE' => 'PHP 5.6.16 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/backend/web'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www_sky\\en-ru_test\\backend\\web\\index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.41 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'i18next=en; remember_passphrase=1; _ym_uid=1468749701547999986; __utma=111872281.363574483.1449221589.1474882667.1474886477.140; __utmc=111872281; __utmz=111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB%22%3B%7D; last_visit=1475048339454::1475059139454; _ga=GA1.1.363574483.1449221589; mp5localhost=f00d8e73b208979beb767475237e6db2'
+    'REQUEST_TIME_FLOAT' => 1475584496.6845
+    'REQUEST_TIME' => 1475584496
+]
+2016-10-04 12:35:41 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 1' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(74): yii\db\Command->execute()
+#2 [internal function]: app\controllers\SiteController->actionIndex()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#5 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#6 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#9 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 1
+The SQL being executed was: INSERT INTO results (name, result, result_e) VALUES ("", , )' in C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO res...')
+#1 C:\wamp\www_sky\en-ru_test\backend\controllers\SiteController.php(74): yii\db\Command->execute()
+#2 [internal function]: app\controllers\SiteController->actionIndex()
+#3 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#4 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#5 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#6 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#7 C:\wamp\www_sky\en-ru_test\backend\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp\www_sky\en-ru_test\backend\web\index.php(12): yii\base\Application->run()
+#9 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 1
+)
+
+2016-10-04 12:35:41 [::1][-][-][info][application] $_POST = [
+    'data' => ''
+    'fin' => '1'
+]
+
+$_COOKIE = [
+    'i18next' => 'en'
+    'remember_passphrase' => '1'
+    '_ym_uid' => '1468749701547999986'
+    '__utma' => '111872281.363574483.1449221589.1474882667.1474886477.140'
+    '__utmc' => '111872281'
+    '__utmz' => '111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => 'b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB\";}'
+    'last_visit' => '1475048339454::1475059139454'
+    '_ga' => 'GA1.1.363574483.1449221589'
+    'mp5localhost' => 'f00d8e73b208979beb767475237e6db2'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www_sky\\en-ru_test'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '12915'
+    'SERVER_SOFTWARE' => 'PHP 5.6.16 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/backend/web'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www_sky\\en-ru_test\\backend\\web\\index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '11'
+    'HTTP_CONTENT_LENGTH' => '11'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:8000'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.41 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:8000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'i18next=en; remember_passphrase=1; _ym_uid=1468749701547999986; __utma=111872281.363574483.1449221589.1474882667.1474886477.140; __utmc=111872281; __utmz=111872281.1449221589.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=b8452e388d3868e3a350914fc23f8096324f5b1397565993f7468b435476bee5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TEWr1wKq9e2KuOhvQAUVUf0bOxHzXpFB%22%3B%7D; last_visit=1475048339454::1475059139454; _ga=GA1.1.363574483.1449221589; mp5localhost=f00d8e73b208979beb767475237e6db2'
+    'REQUEST_TIME_FLOAT' => 1475584541.8762
+    'REQUEST_TIME' => 1475584541
+]
